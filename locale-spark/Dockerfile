@@ -53,7 +53,7 @@ ENV PATH $PATH:$SPARK_HOME/bin
 
 
 COPY start-livy.sh /
-# Alpine Linux comes with Python 2.7 by default
+
 RUN ln -sf /usr/bin/python${PYTHON_VERSION} /usr/bin/python \
     && ln -sf /usr/bin/pip3 /usr/bin/pip
 
