@@ -9,12 +9,15 @@ In [Part1](https://medium.com/@ameennagiwale/setting-up-apache-spark-livy-and-ha
 Add below-mentioned properties to Livy.conf :
 
 **# How long a finished session state should be kept in LivyServer for query**.
+
 livy.server.session.state-retain.sec = 600s
 
 **# What spark master Livy sessions should use**.
+
 livy.spark.master = yarn
 
 **# What spark deploy mode Livy sessions should use**.
+
 livy.spark.deployMode = client
 
 As Livy launches Spark jobs asynchronously to keep track of spark job’s progress we need to poll Livy server for the job status through the REST api so that we need session state to be maintained for a specific duration.
