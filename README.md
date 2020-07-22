@@ -10,8 +10,10 @@ Add below-mentioned properties to Livy.conf :
 
 **# How long a finished session state should be kept in LivyServer for query**.
 livy.server.session.state-retain.sec = 600s
+
 **# What spark master Livy sessions should use**.
 livy.spark.master = yarn
+
 **# What spark deploy mode Livy sessions should use**.
 livy.spark.deployMode = client
 
@@ -61,8 +63,8 @@ Login to the master node (slave01) using below mentioned command
 **_# docker exec -it spark-livy.1.iy2t2imuke3cklgwbnze03kbb bash_**
 
 **Check status of Livy service**
-# $LIVY_HOME/bin/livy-server status
-# $LIVY_HOME/bin/livy-server start
+ $LIVY_HOME/bin/livy-server status
+ $LIVY_HOME/bin/livy-server start
 
 
 - Validate Installation
