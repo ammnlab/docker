@@ -1,7 +1,9 @@
 **Setting up Apache Spark and Livy on Docker Swarm**
+
 In [Part1](https://medium.com/@ameennagiwale/setting-up-apache-spark-livy-and-hadoop-cluster-using-docker-swarm-part-1-2-432a99eed2b8), we have created a swarm and deployed Hadoop YARN service. In the same docker, swarm environment will deploy Apache spark and livy services so Spark jobs can run on already deployed Hadoop cluster.
 
 **Livy Server Configuration**
+
 **Livy.conf** contains the server configuration. The Livy distribution ships with a default configuration file template listing available configuration keys and their default values.
 
 Add below-mentioned properties to Livy.conf :
@@ -59,10 +61,9 @@ Login to the master node (slave01) using below mentioned command
 **_# docker exec -it spark-livy.1.iy2t2imuke3cklgwbnze03kbb bash_**
 
 **Check status of Livy service**
-**_# $LIVY_HOME/bin/livy-server status
-# $LIVY_HOME/bin/livy-server start_**
+# $LIVY_HOME/bin/livy-server status
+# $LIVY_HOME/bin/livy-server start
 
-**
 
 - Validate Installation
 
